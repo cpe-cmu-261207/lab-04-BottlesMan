@@ -7,13 +7,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-green-400 text-center m-4 space-y-4 " style="font-family: 'Otomanopee One', sans-serif">
+	<div class ="text-3xl">
 	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
+	<input class="border-transparent focus:ring-2 ring-blue-300 border border-transparent focus:border-blue-100 outline-none" oninput='addinput(event)' type='text' id="inputdata">
+	<button class="box-border h-12 w-12 p-2 border-2 p-2 transform duration-500 hover-110 bg-white rounded-lg shadow-md self-center h-full hover:bg-yellow-400" onclick='addlist()'>+</button>	
+	<button class = "p-2 transform duration-500 hover-110 bg-white rounded-lg shadow-md self-center h-full hover:bg-red-500" onclick="smoothclear()">Reset</button>
+	<p class="text-indigo-800 text-2xl text-left">Your lists!</p>
+	<div class="bg-gray-200 bg-opacity-90 p-6 m-6 h-screen rounded-xl" id="box">
+	<div id="todoList"></div>
+	<div id="doneList"></div>
+	</div>
+</div>
 </body>
 
+</html>
 </html>
